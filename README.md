@@ -7,19 +7,21 @@ update your source code.
 
 ## Usage
 
-    lein margauto
+    lein margauto [some/path/dir]
 
-Then open [http://localhost:3000/](http://localhost:3000/) in your browser to
-view your documentation.  Refresh as you make changes to see the updates.
+Open `uberdoc.html` from the path you set up, or from `docs/` by default.
+Refresh as you make changes to see the updates.
 
 ## Configuration
 
+```clojure
     (defproject my-project "1.0.0"
       ...
       :margauto {
         :src-dirs    ["src" "test"]
         :sleep-time  1000
-        :port        3000})
+        :target-dir  "resources/public"})
+```
 
 ### `:src-dirs`
 
@@ -37,12 +39,13 @@ again.
 
 The default is 1000 ms (1 second).
 
-### `:port`
+### `:target-dir`
 
-The port on which to run the documenation server.  The default is 3000.
+The relative path where the `uberdoc.html` file will be generated.
 
 ## License
 
 Copyright (C) 2011 Kyle R. Burton <kyle.burton@gmail.com>
+          (C) 2013 Sergio Alvarez-Napagao <tranchis@gmail.com>
 
 Distributed under the Eclipse Public License, the same as Clojure.
