@@ -1,27 +1,27 @@
 (ns leiningen.margauto
   (:require
-   leiningen.marg
-   [noir.core :as noir]
-   [noir.server :as server]))
+    leiningen.marg
+    [noir.core :as noir]
+    [noir.server :as server]))
 
 (defn source-files-seq [dirs]
   (map str
        (filter
-        #(and
-          (.isFile %1)
-          (.endsWith (str %1) ".clj"))
-        (mapcat file-seq (map (fn [s] (java.io.File. s)) dirs)))))
+         #(and
+            (.isFile %1)
+            (.endsWith (str %1) ".clj"))
+         (mapcat file-seq (map (fn [s] (java.io.File. s)) dirs)))))
 
 (defn mtime [f]
   (.lastModified (java.io.File. f)))
 
 (defn take-directory-snapshot [dirs]
   (apply
-   str
-   (map
-    (fn [f]
-      (format "%s:%s\n" f (mtime f)))
-    (source-files-seq dirs))))
+    str
+    (map
+      (fn [f]
+        (format "%s:%s\n" f (mtime f)))
+      (source-files-seq dirs))))
 
 (noir/defpage "/" []
   (slurp "docs/uberdoc.html"))
