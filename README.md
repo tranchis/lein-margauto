@@ -5,6 +5,16 @@ that watches your source directories for changes to your clojure
 source files and rebuilds the Marginalia documentation whenever you
 update your source code.
 
+## Installation
+
+Add to your `project.clj`:
+
+```clojure
+:plugins [...
+           [com.github.tranchis/lein-margauto "1.0.14"]
+         ]
+```
+
 ## Usage
 
     lein margauto [some/path/dir]
