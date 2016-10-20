@@ -1,4 +1,4 @@
-(defproject com.github.luskwater/lein-margauto "1.0.15-SNAPSHOT"
+(defproject com.github.luskwater/lein-margauto "1.0.15"
   :description "Leiningen plugin: Autobuilder and simple server for Marginalia documentation."
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
