@@ -7,3 +7,5 @@ pom.xml
 docs/uberdoc.html
 /target
 foo.bar*
+/.lein-repl-history
+/.nrepl-port

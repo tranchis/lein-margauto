@@ -3,5 +3,5 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[lein-marginalia "0.9.0"]]
-  :repositories [["releases" {:url "https://clojars.org/repo"
-                            :creds :gpg}]])
+  :repositories [["releases" :clojars]]
+  :profiles {:provided {:dependencies [[org.clojure/clojure "1.8.0"]]}})
