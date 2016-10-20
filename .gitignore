@@ -9,3 +9,4 @@ docs/uberdoc.html
 foo.bar*
 /.lein-repl-history
 /.nrepl-port
+/pom.xml.asc
