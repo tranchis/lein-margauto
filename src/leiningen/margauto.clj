@@ -1,8 +1,5 @@
 (ns leiningen.margauto
-  "Automatically update Marginalia-generated documentation.
-
-  Monitor Clojure and ClojureScript files in specified directories,
-  updating at intervals when a source file changes."
+  "Automatically update Marginalia-generated documentation."
   (:require [leiningen.marg :as lm]
             [clojure.tools.cli :as cli]))
 
