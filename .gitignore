@@ -6,3 +6,7 @@ pom.xml
 .lein-deps-sum
 docs/uberdoc.html
 /target
+foo.bar*
+/.lein-repl-history
+/.nrepl-port
+/pom.xml.asc
